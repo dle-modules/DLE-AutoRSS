@@ -70,7 +70,7 @@ $rssWheres = implode(' AND ', $listWhere);
 $rssList = $db->super_query("SELECT * FROM " . PREFIX . "_auto_rss WHERE " . $rssWheres . $limit, true);
 $qi++;
 
-require_once(AUTORSS_DIR . '/autoloader.php');
+require_once(AUTORSS_DIR . '/library/SimplePie.php');
 
 
 foreach ($rssList as $rssItem) {
